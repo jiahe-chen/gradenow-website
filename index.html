@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GradeNow · AI快批 — AI-Powered Grading for K-12 Teachers</title>
+  <meta name="description" content="GradeNow (AI快批) is a human-in-the-loop AI grading assistant for K-12 educators. Reduce grading time by 10x while staying compliant.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <img src="assets/images/logo_en.png" alt="GradeNow" class="logo-img" id="logo-en">
+        <img src="assets/images/logo_cn.png" alt="AI快批" class="logo-img hidden" id="logo-cn">
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#features" class="nav-link" data-zh="核心功能" data-en="Features">Features</a>
+        <a href="#workflow" class="nav-link" data-zh="工作流程" data-en="How It Works">How It Works</a>
+        <a href="#pricing" class="nav-link" data-zh="定价方案" data-en="Pricing">Pricing</a>
+        <a href="#about" class="nav-link" data-zh="关于我们" data-en="About">About</a>
+      </div>
+      <div class="nav-actions">
+        <button class="lang-switch" id="lang-switch" onclick="toggleLang()">
+          <span class="lang-label" id="lang-label">中文</span>
+        </button>
+        <a href="#cta" class="btn btn-primary btn-nav" data-zh="免费试用" data-en="Try Free">Try Free</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge" data-zh="专为 K-12 教师打造" data-en="Built for K-12 Teachers">Built for K-12 Teachers</div>
+        <h1 class="hero-title">
+          <span data-zh="AI 驱动的智能批改" data-en="AI-Powered Grading,">AI-Powered Grading,</span><br>
+          <span data-zh="教师始终掌控全局" data-en="Teachers Stay in Control">Teachers Stay in Control</span>
+        </h1>
+        <p class="hero-desc" data-zh="AI快批是一款以教师为中心的智能批改助手。AI 预处理评分与反馈，教师快速审核确认——批改效率提升 10 倍，同时完全符合教育合规要求。" data-en="GradeNow is a teacher-centric AI grading assistant. AI pre-processes scores and feedback based on rubrics, while teachers rapidly review and approve — 10x faster grading that's fully compliant with education policies.">GradeNow is a teacher-centric AI grading assistant. AI pre-processes scores and feedback based on rubrics, while teachers rapidly review and approve — 10x faster grading that's fully compliant with education policies.</p>
+        <div class="hero-actions">
+          <a href="#cta" class="btn btn-primary btn-lg" data-zh="开始免费使用" data-en="Get Started Free">Get Started Free</a>
+          <a href="#workflow" class="btn btn-ghost btn-lg" data-zh="了解工作原理" data-en="See How It Works">See How It Works</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">10x</span>
+            <span class="stat-label" data-zh="批改提速" data-en="Faster Grading">Faster Grading</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">99%+</span>
+            <span class="stat-label" data-zh="客观题准确率" data-en="Objective Accuracy">Objective Accuracy</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label" data-zh="教师最终审核" data-en="Teacher Verified">Teacher Verified</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-mockup">
+          <div class="mockup-header">
+            <div class="mockup-dots"><span></span><span></span><span></span></div>
+            <div class="mockup-title" data-zh="批改工作台" data-en="Grading Console">Grading Console</div>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-sidebar">
+              <div class="mockup-nav-item active" data-zh="待审核" data-en="To Review">To Review</div>
+              <div class="mockup-nav-item" data-zh="已完成" data-en="Completed">Completed</div>
+              <div class="mockup-nav-item" data-zh="数据分析" data-en="Analytics">Analytics</div>
+            </div>
+            <div class="mockup-content">
+              <div class="mockup-card">
+                <div class="mockup-card-header">
+                  <span class="traffic-light green"></span>
+                  <span class="mockup-student" data-zh="学生 A — 数学测验" data-en="Student A — Math Quiz">Student A — Math Quiz</span>
+                  <span class="mockup-score">92/100</span>
+                </div>
+                <div class="mockup-feedback" data-zh="AI建议：第3题步骤完整，计算正确 ✓" data-en="AI: Q3 steps complete, calculation correct ✓">AI: Q3 steps complete, calculation correct ✓</div>
+                <div class="mockup-actions-row">
+                  <span class="mockup-btn approve" data-zh="✓ 确认" data-en="✓ Approve">✓ Approve</span>
+                  <span class="mockup-btn edit" data-zh="✎ 修改" data-en="✎ Edit">✎ Edit</span>
+                </div>
+              </div>
+              <div class="mockup-card">
+                <div class="mockup-card-header">
+                  <span class="traffic-light yellow"></span>
+                  <span class="mockup-student" data-zh="学生 B — 数学测验" data-en="Student B — Math Quiz">Student B — Math Quiz</span>
+                  <span class="mockup-score">75/100</span>
+                </div>
+                <div class="mockup-feedback" data-zh="AI建议：第5题缺少关键步骤，建议扣分" data-en="AI: Q5 missing key step, suggest deduction">AI: Q5 missing key step, suggest deduction</div>
+                <div class="mockup-actions-row">
+                  <span class="mockup-btn approve" data-zh="✓ 确认" data-en="✓ Approve">✓ Approve</span>
+                  <span class="mockup-btn edit" data-zh="✎ 修改" data-en="✎ Edit">✎ Edit</span>
+                </div>
+              </div>
+              <div class="mockup-card">
+                <div class="mockup-card-header">
+                  <span class="traffic-light red"></span>
+                  <span class="mockup-student" data-zh="学生 C — 数学测验" data-en="Student C — Math Quiz">Student C — Math Quiz</span>
+                  <span class="mockup-score">?/100</span>
+                </div>
+                <div class="mockup-feedback" data-zh="⚠ AI 置信度低，需要教师人工判断" data-en="⚠ Low confidence — needs teacher review">⚠ Low confidence — needs teacher review</span></div>
+                <div class="mockup-actions-row">
+                  <span class="mockup-btn review" data-zh="👁 审阅" data-en="👁 Review">👁 Review</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Point Section -->
+  <section class="pain-section">
+    <div class="container">
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="pain-number">52.5</div>
+          <div class="pain-unit" data-zh="小时/周" data-en="hrs/week">hrs/week</div>
+          <div class="pain-desc" data-zh="中国K-12教师平均每周工作时长" data-en="Average weekly hours for K-12 teachers in China">Average weekly hours for K-12 teachers in China</div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="pain-number">8-13</div>
+          <div class="pain-unit" data-zh="小时/周" data-en="hrs/week">hrs/week</div>
+          <div class="pain-desc" data-zh="用于无偿加班批改作业" data-en="Spent on unpaid after-hours grading">Spent on unpaid after-hours grading</div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="pain-number">40+</div>
+          <div class="pain-unit" data-zh="学生/班" data-en="students/class">students/class</div>
+          <div class="pain-desc" data-zh="大班额使个性化反馈几乎不可能" data-en="Large classes make personalized feedback nearly impossible">Large classes make personalized feedback nearly impossible</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-zh="核心功能" data-en="Core Features">Core Features</div>
+        <h2 class="section-title" data-zh="全方位智能批改方案" data-en="Everything You Need to Grade Smarter">Everything You Need to Grade Smarter</h2>
+        <p class="section-desc" data-zh="从拍照上传到数据分析，一站式覆盖批改全流程" data-en="From photo capture to analytics, covering the entire grading workflow">From photo capture to analytics, covering the entire grading workflow</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <h3 class="feature-title" data-zh="批量拍照导入" data-en="Batch Capture & Import">Batch Capture & Import</h3>
+          <p class="feature-desc" data-zh="支持连续拍照和多页 PDF 导入，快速录入整班试卷，告别逐份扫描的繁琐" data-en="Continuous photo capture and multi-page PDF import. Quickly digitize an entire class of papers — no more scanning one by one.">Continuous photo capture and multi-page PDF import. Quickly digitize an entire class of papers — no more scanning one by one.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3 class="feature-title" data-zh="客观题自动批改" data-en="Objective Auto-Grading">Objective Auto-Grading</h3>
+          <p class="feature-desc" data-zh="选择题、填空题、判断题自动评分，准确率超过 99%，瞬间完成全班客观题批改" data-en="Multiple choice, fill-in-the-blank, and true/false questions graded automatically with 99%+ accuracy. Entire class done in seconds.">Multiple choice, fill-in-the-blank, and true/false questions graded automatically with 99%+ accuracy. Entire class done in seconds.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 class="feature-title" data-zh="主观题辅助批改" data-en="Subjective Grading Assist">Subjective Grading Assist</h3>
+          <p class="feature-desc" data-zh="基于评分标准提取得分点，检查解题步骤，生成评语草稿——教师审核即可，省去从零批改的时间" data-en="Rubric-based point extraction, step checking, and draft comments generated by AI — teachers just review and approve.">Rubric-based point extraction, step checking, and draft comments generated by AI — teachers just review and approve.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+          </div>
+          <h3 class="feature-title" data-zh="班级数据分析" data-en="Class Analytics">Class Analytics</h3>
+          <p class="feature-desc" data-zh="自动生成错误分布、知识点薄弱环节分析和家长报告，让数据驱动教学改进" data-en="Auto-generated error distribution, misconception clustering, and parent-facing reports. Let data drive teaching improvement.">Auto-generated error distribution, misconception clustering, and parent-facing reports. Let data drive teaching improvement.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 class="feature-title" data-zh="合规安全设计" data-en="Compliance by Design">Compliance by Design</h3>
+          <p class="feature-desc" data-zh="一键脱敏学生姓名和身份信息，角色权限控制，完整审计日志，支持公有云/私有化部署" data-en="One-click redaction of student names and IDs, role-based access, full audit logs, and flexible deployment (public cloud or on-premise).">One-click redaction of student names and IDs, role-based access, full audit logs, and flexible deployment (public cloud or on-premise).</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3 class="feature-title" data-zh="多平台支持" data-en="Cross-Platform">Cross-Platform</h3>
+          <p class="feature-desc" data-zh="微信小程序快速体验，iOS 和 Android 独立应用提供完整批改环境，随时随地高效批改" data-en="WeChat Mini Program for quick access, standalone iOS and Android apps for full grading power — grade anytime, anywhere.">WeChat Mini Program for quick access, standalone iOS and Android apps for full grading power — grade anytime, anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow Section -->
+  <section class="workflow" id="workflow">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-zh="工作流程" data-en="How It Works">How It Works</div>
+        <h2 class="section-title" data-zh="拍照、AI批改、教师审核——三步搞定" data-en="Capture, AI Grades, Teacher Reviews — Three Steps">Capture, AI Grades, Teacher Reviews — Three Steps</h2>
+        <p class="section-desc" data-zh="教师始终拥有最终评分权，AI 只是让过程快 10 倍" data-en="Teachers always have final say. AI just makes the process 10x faster.">Teachers always have final say. AI just makes the process 10x faster.</p>
+      </div>
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3 class="step-title" data-zh="上传试卷" data-en="Upload Papers">Upload Papers</h3>
+            <p class="step-desc" data-zh="拍照或上传 PDF，系统通过 OCR 和版面分析自动识别题目和学生作答内容" data-en="Take photos or upload PDFs. The system uses OCR and layout parsing to automatically recognize questions and student responses.">Take photos or upload PDFs. The system uses OCR and layout parsing to automatically recognize questions and student responses.</p>
+          </div>
+          <div class="step-visual">
+            <div class="step-icon-wrap">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="workflow-connector"></div>
+        <div class="workflow-step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3 class="step-title" data-zh="AI 智能批改" data-en="AI Grading">AI Grading</h3>
+            <p class="step-desc" data-zh="客观题自动评分，主观题基于评分标准生成得分建议和评语草稿，并用红黄绿三色标注置信度" data-en="Objective items scored automatically. Subjective items get rubric-based draft scores and comments, color-coded by confidence level.">Objective items scored automatically. Subjective items get rubric-based draft scores and comments, color-coded by confidence level.</p>
+          </div>
+          <div class="step-visual">
+            <div class="step-icon-wrap">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M20 12a8 8 0 0 0-8-8v8h8z" opacity="0.3"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="workflow-connector"></div>
+        <div class="workflow-step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3 class="step-title" data-zh="教师审核确认" data-en="Teacher Review">Teacher Review</h3>
+            <p class="step-desc" data-zh="在高效审核界面中逐条确认或修改 AI 建议，所有最终评分和反馈由教师把关，系统记录完整审计轨迹" data-en="Review and approve AI suggestions in a streamlined queue. All final scores and feedback are teacher-approved with a full audit trail.">Review and approve AI suggestions in a streamlined queue. All final scores and feedback are teacher-approved with a full audit trail.</p>
+          </div>
+          <div class="step-visual">
+            <div class="step-icon-wrap">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Traffic Light Section -->
+  <section class="traffic-section">
+    <div class="container">
+      <div class="traffic-content">
+        <div class="traffic-text">
+          <div class="section-badge" data-zh="信号灯系统" data-en="Traffic Light System">Traffic Light System</div>
+          <h2 class="section-title left-align" data-zh="智能分级，精准聚焦" data-en="Smart Triage, Focused Attention">Smart Triage, Focused Attention</h2>
+          <p class="traffic-desc" data-zh="AI 为每道主观题的批改结果标注置信度，教师只需重点关注需要人工判断的题目，大幅节省审核时间。" data-en="AI assigns a confidence level to every subjective grading result. Teachers focus only on items that need human judgment, dramatically reducing review time.">AI assigns a confidence level to every subjective grading result. Teachers focus only on items that need human judgment, dramatically reducing review time.</p>
+          <div class="traffic-items">
+            <div class="traffic-item">
+              <span class="traffic-dot green"></span>
+              <div>
+                <strong data-zh="高置信度" data-en="High Confidence">High Confidence</strong>
+                <span data-zh="— 一键确认即可" data-en="— One-click approve"> — One-click approve</span>
+              </div>
+            </div>
+            <div class="traffic-item">
+              <span class="traffic-dot yellow"></span>
+              <div>
+                <strong data-zh="中等置信度" data-en="Medium Confidence">Medium Confidence</strong>
+                <span data-zh="— 快速浏览后确认或微调" data-en="— Quick review, then approve or adjust"> — Quick review, then approve or adjust</span>
+              </div>
+            </div>
+            <div class="traffic-item">
+              <span class="traffic-dot red"></span>
+              <div>
+                <strong data-zh="低置信度" data-en="Low Confidence">Low Confidence</strong>
+                <span data-zh="— 需要教师仔细审阅" data-en="— Requires careful teacher review"> — Requires careful teacher review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="traffic-visual">
+          <div class="traffic-demo">
+            <div class="demo-bar green-bar"><span class="bar-fill" style="width:70%"></span><span class="bar-label" data-zh="70% 高置信" data-en="70% High">70% High</span></div>
+            <div class="demo-bar yellow-bar"><span class="bar-fill" style="width:20%"></span><span class="bar-label" data-zh="20% 中等" data-en="20% Medium">20% Medium</span></div>
+            <div class="demo-bar red-bar"><span class="bar-fill" style="width:10%"></span><span class="bar-label" data-zh="10% 低置信" data-en="10% Low">10% Low</span></div>
+            <div class="demo-note" data-zh="教师只需重点关注 10% 的题目" data-en="Teachers focus on just 10% of items">Teachers focus on just 10% of items</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-zh="定价方案" data-en="Pricing">Pricing</div>
+        <h2 class="section-title" data-zh="简单透明的定价" data-en="Simple, Transparent Pricing">Simple, Transparent Pricing</h2>
+        <p class="section-desc" data-zh="从免费开始，按需升级" data-en="Start free, upgrade as you grow">Start free, upgrade as you grow</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name" data-zh="免费版" data-en="Free">Free</div>
+          <div class="pricing-price">
+            <span class="price-amount">¥0</span>
+            <span class="price-period" data-zh="/月" data-en="/mo">/mo</span>
+          </div>
+          <ul class="pricing-features">
+            <li data-zh="每周 50 份提交" data-en="50 submissions per week">50 submissions per week</li>
+            <li data-zh="客观题自动批改" data-en="Objective auto-grading">Objective auto-grading</li>
+            <li data-zh="基础数据分析" data-en="Basic analytics">Basic analytics</li>
+            <li data-zh="微信小程序访问" data-en="WeChat Mini Program access">WeChat Mini Program access</li>
+          </ul>
+          <a href="#cta" class="btn btn-outline btn-full" data-zh="免费开始" data-en="Get Started">Get Started</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-popular" data-zh="最受欢迎" data-en="Most Popular">Most Popular</div>
+          <div class="pricing-name" data-zh="专业版" data-en="Pro">Pro</div>
+          <div class="pricing-price">
+            <span class="price-amount">¥29</span>
+            <span class="price-period" data-zh="/月" data-en="/mo">/mo</span>
+          </div>
+          <ul class="pricing-features">
+            <li data-zh="无限提交" data-en="Unlimited submissions">Unlimited submissions</li>
+            <li data-zh="主观题辅助批改" data-en="Subjective grading assist">Subjective grading assist</li>
+            <li data-zh="完整数据分析与报告" data-en="Full analytics & reports">Full analytics & reports</li>
+            <li data-zh="iOS / Android 应用" data-en="iOS / Android apps">iOS / Android apps</li>
+            <li data-zh="家长报告生成" data-en="Parent report generation">Parent report generation</li>
+          </ul>
+          <a href="#cta" class="btn btn-primary btn-full" data-zh="立即订阅" data-en="Subscribe Now">Subscribe Now</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name" data-zh="学校版" data-en="School">School</div>
+          <div class="pricing-price">
+            <span class="price-amount" data-zh="定制" data-en="Custom">Custom</span>
+          </div>
+          <ul class="pricing-features">
+            <li data-zh="按学校/区域授权" data-en="School/region licensing">School/region licensing</li>
+            <li data-zh="私有化部署选项" data-en="On-premise deployment">On-premise deployment</li>
+            <li data-zh="自定义题型与评分标准" data-en="Custom question types & rubrics">Custom question types & rubrics</li>
+            <li data-zh="高级管理后台" data-en="Advanced admin dashboard">Advanced admin dashboard</li>
+            <li data-zh="专属技术支持" data-en="Dedicated support">Dedicated support</li>
+          </ul>
+          <a href="#cta" class="btn btn-outline btn-full" data-zh="联系我们" data-en="Contact Us">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge" data-zh="关于我们" data-en="About Us">About Us</div>
+        <h2 class="section-title" data-zh="由教育科技团队倾力打造" data-en="Built by an EdTech Team That Cares">Built by an EdTech Team That Cares</h2>
+      </div>
+      <div class="about-content">
+        <p class="about-desc" data-zh="GradeNow（AI快批）由上海涯思人工智能科技有限公司（YAS-AI）研发，团队来自昆山杜克大学，深度扎根 K-12 教育场景。我们通过一线教师访谈与试点合作，持续打磨产品，致力于构建值得信赖、以数据驱动的教育基础设施。" data-en="GradeNow is developed by YAS-AI (Shanghai Yas AI Technology Co., Ltd.), a team from Duke Kunshan University deeply rooted in K-12 education. Through frontline teacher interviews and pilot partnerships, we continuously refine our product to build trustworthy, data-driven education infrastructure.">GradeNow is developed by YAS-AI (Shanghai Yas AI Technology Co., Ltd.), a team from Duke Kunshan University deeply rooted in K-12 education. Through frontline teacher interviews and pilot partnerships, we continuously refine our product to build trustworthy, data-driven education infrastructure.</p>
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4 data-zh="合规优先" data-en="Compliance First">Compliance First</h4>
+            <p data-zh="数据脱敏、审计日志、灵活部署" data-en="Data redaction, audit logs, flexible deployment">Data redaction, audit logs, flexible deployment</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h4 data-zh="教师中心" data-en="Teacher-Centric">Teacher-Centric</h4>
+            <p data-zh="教师始终拥有最终决定权" data-en="Teachers always have the final say">Teachers always have the final say</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h4 data-zh="数据驱动" data-en="Data-Driven">Data-Driven</h4>
+            <p data-zh="用数据洞察改进教学" data-en="Actionable insights to improve teaching">Actionable insights to improve teaching</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta" id="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title" data-zh="准备好让批改效率提升 10 倍了吗？" data-en="Ready to Grade 10x Faster?">Ready to Grade 10x Faster?</h2>
+        <p class="cta-desc" data-zh="加入试用等候名单，成为首批体验 AI 智能批改的教师" data-en="Join the waitlist and be among the first teachers to experience AI-powered grading">Join the waitlist and be among the first teachers to experience AI-powered grading</p>
+        <form class="cta-form" onsubmit="handleSubmit(event)">
+          <input type="email" class="cta-input" placeholder="your@email.com" data-zh-placeholder="请输入邮箱地址" data-en-placeholder="your@email.com" required>
+          <button type="submit" class="btn btn-primary btn-lg" data-zh="加入等候名单" data-en="Join Waitlist">Join Waitlist</button>
+        </form>
+        <p class="cta-note" data-zh="免费开始 · 无需信用卡 · 随时取消" data-en="Free to start · No credit card required · Cancel anytime">Free to start · No credit card required · Cancel anytime</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="assets/images/logo_en.png" alt="GradeNow" class="footer-logo" id="footer-logo-en">
+          <img src="assets/images/logo_cn.png" alt="AI快批" class="footer-logo hidden" id="footer-logo-cn">
+          <p class="footer-tagline" data-zh="AI 驱动的 K-12 智能批改助手" data-en="AI-Powered Grading for K-12 Teachers">AI-Powered Grading for K-12 Teachers</p>
+        </div>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4 data-zh="产品" data-en="Product">Product</h4>
+            <a href="#features" data-zh="核心功能" data-en="Features">Features</a>
+            <a href="#pricing" data-zh="定价" data-en="Pricing">Pricing</a>
+            <a href="#workflow" data-zh="工作流程" data-en="How It Works">How It Works</a>
+          </div>
+          <div class="footer-col">
+            <h4 data-zh="公司" data-en="Company">Company</h4>
+            <a href="#about" data-zh="关于我们" data-en="About">About</a>
+            <a href="#" data-zh="加入团队" data-en="Careers">Careers</a>
+            <a href="#" data-zh="联系我们" data-en="Contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4 data-zh="法律" data-en="Legal">Legal</h4>
+            <a href="#" data-zh="隐私政策" data-en="Privacy Policy">Privacy Policy</a>
+            <a href="#" data-zh="服务条款" data-en="Terms of Service">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-zh="© 2025 上海涯思人工智能科技有限公司 (YAS-AI). 保留所有权利。" data-en="© 2025 YAS-AI (Shanghai Yas AI Technology Co., Ltd.). All rights reserved.">© 2025 YAS-AI (Shanghai Yas AI Technology Co., Ltd.). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
